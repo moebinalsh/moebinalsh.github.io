@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UFA</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
@@ -12,7 +13,7 @@
             overflow: hidden;
             background-color: #fff; /* Set background color to white */
             color: #000; /* Set text color to black for contrast */
-            font-family: 'Courier New', Courier, monospace;
+            font-family: 'Roboto', sans-serif;
         }
 
         #particles-js {
@@ -35,6 +36,7 @@
             justify-content: center;
             align-items: center;
             background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+            padding-top: 50px; /* Added padding to prevent logo from being cut off */
         }
 
         .logo {
@@ -46,24 +48,35 @@
             font-size: 24px; /* Adjusted font size for mobile */
             text-align: center;
             margin-bottom: 10px; /* Adjusted margin for mobile */
+            font-weight: 700;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            transition: color 0.3s ease-in-out;
+        }
+
+        h1:hover {
+            color: #d00000;
         }
 
         p {
             font-size: 18px; /* Adjusted font size for mobile */
             text-align: center;
             margin-bottom: 10px; /* Adjusted margin for mobile */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
         }
 
         h2 {
             font-size: 20px; /* Adjusted font size for mobile */
             text-align: center;
             margin-top: 10px; /* Adjusted margin for mobile */
+            font-weight: 700;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
         }
 
         label {
             font-size: 16px; /* Adjusted font size for mobile */
             display: block;
             margin-bottom: 5px;
+            font-weight: 700;
         }
 
         input[type="text"],
@@ -98,12 +111,13 @@
             cursor: pointer;
             font-size: 16px; /* Adjusted font size for mobile */
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-            transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out, transform 0.2s;
         }
 
         input[type="submit"]:hover {
             background: linear-gradient(45deg, #d00000, #ff0000); /* Darker gradient on hover */
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+            transform: scale(1.05);
         }
 
         @media (min-width: 768px) {
@@ -152,8 +166,8 @@
         <!-- Logo in the middle -->
         <img src="logo1.PNG" alt="Your Logo" class="logo">
         
-        <h1>Ur Fitness Avenue</h1>
-        <p>Coming soon...</p>
+        <h1>Coming soon...</h1>
+        <p></p>
 
         <h2>Contact Us</h2>
         <form action="https://formspree.io/f/xpzgrrno" method="POST">
