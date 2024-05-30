@@ -62,6 +62,8 @@
 
         label {
             font-size: 16px; /* Adjusted font size for mobile */
+            display: block;
+            margin-bottom: 5px;
         }
 
         input[type="text"],
@@ -70,26 +72,39 @@
             width: 100%;
             padding: 10px;
             margin-bottom: 10px;
-            border: none;
-            background-color: #333;
-            color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            color: #333;
             font-size: 16px; /* Adjusted font size for mobile */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        textarea:focus {
+            border-color: #ff0000; /* Red border on focus */
+            box-shadow: 0 2px 8px rgba(255, 0, 0, 0.2);
+            outline: none;
         }
 
         input[type="submit"] {
-            background-color: #000; /* Darker button color */
+            background: linear-gradient(45deg, #ff0000, #d00000); /* Gradient background */
             color: #fff;
             padding: 10px 20px;
             border: none;
+            border-radius: 5px;
             cursor: pointer;
             font-size: 16px; /* Adjusted font size for mobile */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         }
 
         input[type="submit"]:hover {
-            background-color: #333; /* Darker color on hover */
+            background: linear-gradient(45deg, #d00000, #ff0000); /* Darker gradient on hover */
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
         }
-
-        /* Glitch overlay removed */
 
         @media (min-width: 768px) {
             /* Adjust styles for screens with a minimum width of 768px (PC screens) */
@@ -167,9 +182,9 @@
                     stroke: { width: 0, color: '#000000' },
                     polygon: { nb_sides: 5 },
                 },
-                opacity: { value: 0.5, random: true, anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false } },
+                opacity: { value: 0.9, random: true, anim: { enable: false, speed: 1, opacity_min: 0.6, sync: false } },
                 size: { value: 7, random: true, anim: { enable: false, speed: 40, size_min: 0.1, sync: false } },
-                line_linked: { enable: false, distance: 500, color: '#ff0000', opacity: 0.4, width: 2 }, // Red lines
+                line_linked: { enable: false, distance: 500, color: '#ff0000', opacity: 0.9, width: 2 }, // Red lines
                 move: {
                     enable: true,
                     speed: 6,
