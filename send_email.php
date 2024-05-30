@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message = $_POST["message"];
 
     // Set your email address where you want to receive messages.
-    $to = "admin@urfitave.com, khalifa@urfitave.com, yousef@urfitave.com, ahmed@urfitave.com, salem@urfitave.com";
+    $to = "admin@urfitave.com";
     $subject = "Contact Form Submission from $name";
     $headers = "From: $email";
 
