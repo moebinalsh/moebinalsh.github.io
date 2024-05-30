@@ -3,130 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ethical Hacking Services - Stay secure in the digital age. Contact us for more information.">
+    <meta name="keywords" content="Ethical Hacking, Cybersecurity, Security Services">
+    <meta name="author" content="Your Name">
+    <meta property="og:title" content="Ethical Hacking Services">
+    <meta property="og:description" content="Stay secure in the digital age. Contact us for more information.">
+    <meta property="og:image" content="logo1.PNG">
+    <meta property="og:url" content="https://yourwebsite.com">
     <title>ParaV!ru$</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #000;
-            color: #fff;
-            font-family: 'Courier New', Courier, monospace;
-        }
-
-        #particles-js {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
-
-        .content {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-color: rgba(0, 0, 0, 0.7);
-        }
-
-        .logo {
-            max-width: 80%; /* Adjusted logo size for mobile */
-            margin-bottom: 20px;
-        }
-
-        h1 {
-            font-size: 24px; /* Adjusted font size for mobile */
-            text-align: center;
-            margin-bottom: 10px; /* Adjusted margin for mobile */
-        }
-
-        p {
-            font-size: 18px; /* Adjusted font size for mobile */
-            text-align: center;
-            margin-bottom: 10px; /* Adjusted margin for mobile */
-        }
-
-        h2 {
-            font-size: 20px; /* Adjusted font size for mobile */
-            text-align: center;
-            margin-top: 10px; /* Adjusted margin for mobile */
-        }
-
-        label {
-            font-size: 16px; /* Adjusted font size for mobile */
-        }
-
-        input[type="text"],
-        input[type="email"],
-        textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: none;
-            background-color: #333;
-            color: #fff;
-            font-size: 16px; /* Adjusted font size for mobile */
-        }
-
-        input[type="submit"] {
-            background-color: #000; /* Darker button color */
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            font-size: 16px; /* Adjusted font size for mobile */
-        }
-
-        input[type="submit"]:hover {
-            background-color: #333; /* Darker color on hover */
-        }
-
-        /* Glitch overlay removed */
-
-        @media (min-width: 768px) {
-            /* Adjust styles for screens with a minimum width of 768px (PC screens) */
-            .logo {
-                max-width: 300px; /* Adjusted logo size for PC */
-            }
-
-            h1 {
-                font-size: 36px;
-                margin-bottom: 20px;
-            }
-
-            p {
-                font-size: 24px;
-                margin-bottom: 20px;
-            }
-
-            h2 {
-                font-size: 28px;
-                margin-top: 20px;
-            }
-
-            label {
-                font-size: 18px;
-            }
-
-            input[type="text"],
-            input[type="email"],
-            textarea {
-                font-size: 18px;
-            }
-
-            input[type="submit"] {
-                font-size: 18px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Particles.js Background -->
@@ -143,20 +29,20 @@
         <h2>Contact Us</h2>
         <form action="https://formspree.io/f/xpzgrrno" method="POST">
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required><br>
+            <input type="text" id="name" name="name" required aria-label="Name"><br>
 
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required><br>
+            <input type="email" id="email" name="email" required aria-label="Email"><br>
 
             <label for="message">Message:</label><br>
-            <textarea id="message" name="message" rows="4" required></textarea><br>
+            <textarea id="message" name="message" rows="4" required aria-label="Message"></textarea><br>
 
             <input type="submit" value="Submit">
         </form>
     </div>
 
     <!-- Particles.js Configuration -->
-   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
         particlesJS('particles-js', {
             particles: {
