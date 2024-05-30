@@ -1,7 +1,7 @@
-<?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST["name"];
     $email = $_POST["email"];
+    $phone = $_POST["phone"]; // Added phone number field
     $message = $_POST["message"];
 
     // Set your email address where you want to receive messages.
@@ -12,6 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Compose the email message.
     $email_message = "Name: $name\n";
     $email_message .= "Email: $email\n";
+    $email_message .= "Phone: $phone\n"; // Include phone number in the message
     $email_message .= "Message:\n$message";
 
     // Send the email.
@@ -23,4 +24,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 } else {
     echo "Access denied.";
 }
-?>
