@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ParaV!ru$</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #000;
+            color: #fff;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .logo {
+            max-width: 80%; /* Adjusted logo size for mobile */
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 24px; /* Adjusted font size for mobile */
+            text-align: center;
+            margin-bottom: 10px; /* Adjusted margin for mobile */
+        }
+
+        p {
+            font-size: 18px; /* Adjusted font size for mobile */
+            text-align: center;
+            margin-bottom: 10px; /* Adjusted margin for mobile */
+        }
+
+        h2 {
+            font-size: 20px; /* Adjusted font size for mobile */
+            text-align: center;
+            margin-top: 10px; /* Adjusted margin for mobile */
+        }
+
+        label {
+            font-size: 16px; /* Adjusted font size for mobile */
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            background-color: #333;
+            color: #fff;
+            font-size: 16px; /* Adjusted font size for mobile */
+        }
+
+        input[type="submit"] {
+            background-color: #000; /* Darker button color */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px; /* Adjusted font size for mobile */
+        }
+
+        input[type="submit"]:hover {
+            background-color: #333; /* Darker color on hover */
+        }
+
+        /* Glitch overlay removed */
+
+        @media (min-width: 768px) {
+            /* Adjust styles for screens with a minimum width of 768px (PC screens) */
+            .logo {
+                max-width: 300px; /* Adjusted logo size for PC */
+            }
+
+            h1 {
+                font-size: 36px;
+                margin-bottom: 20px;
+            }
+
+            p {
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+
+            h2 {
+                font-size: 28px;
+                margin-top: 20px;
+            }
+
+            label {
+                font-size: 18px;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            textarea {
+                font-size: 18px;
+            }
+
+            input[type="submit"] {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Particles.js Background -->
+    <div id="particles-js"></div>
+    
+    <!-- Content -->
+    <div class="content">
+        <!-- Logo in the middle -->
+        <img src="logo1.PNG" alt="Your Logo" class="logo">
+        
+        <h1>Ethical Hacking Services</h1>
+        <p>Stay secure in the digital age.</p>
+
+        <h2>Contact Us</h2>
+        <form action="https://formspree.io/f/xpzgrrno" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" required></textarea><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <!-- Particles.js Configuration -->
+   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 50, density: { enable: true, value_area: 800 } },
+                color: { value: '#00ff00' },
+                shape: {
+                    type: 'circle',
+                    stroke: { width: 0, color: '#000000' },
+                    polygon: { nb_sides: 5 },
+                },
+                opacity: { value: 0.5, random: true, anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false } },
+                size: { value: 7, random: true, anim: { enable: false, speed: 40, size_min: 0.1, sync: false } },
+                line_linked: { enable: false, distance: 500, color: '#ffffff', opacity: 0.4, width: 2 },
+                move: {
+                    enable: true,
+                    speed: 6,
+                    direction: 'none',
+                    random: true,
+                    straight: false,
+                    out_mode: 'out',
+                    bounce: false,
+                    attract: { enable: false, rotateX: 600, rotateY: 1200 },
+                },
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' }, resize: true },
+                modes: { grab: { distance: 400, line_linked: { opacity: 1 } }, bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 }, repulse: { distance: 200, duration: 0.4 }, push: { particles_nb: 4 }, remove: { particles_nb: 2 } },
+            },
+            retina_detect: true,
+        });
+    </script>
+</body>
+</html>
