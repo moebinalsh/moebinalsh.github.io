@@ -242,7 +242,10 @@
                 <span class="close" onclick="closeAboutModal()">&times;</span>
                 <h2>About Us</h2>
                 <p>
-                    Our company is revolutionizing the fitness shopping experience in the UAE by aggregating all supplement and activewear stores into a single, user-friendly mobile platform. No more hopping between websites—we bring quality, variety, and authenticity right to your fingertips.
+                    UFA is your ultimate fitness companion in the UAE. We provide a curated selection of top-notch fitness products, tailored recommendations, and a community-driven platform for enthusiasts like you.
+                </p>
+                <p>
+                    With UFA, discovering the right gear for your fitness journey is at your fingertips.
                 </p>
                 <p>
                     UFA is more than a marketplace; it's your personalized fitness shopping companion. Powered by AI, it recommends products tailored to your goals and preferences. Enjoy exclusive discounts and a loyalty program that rewards your healthy choices.
@@ -286,6 +289,38 @@
         function closeAboutModal() {
             document.getElementById('aboutModal').style.display = 'none';
         }
+
+        // Particles.js configuration
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 50, density: { enable: true, value_area: 800 } },
+                color: { value: '#ff0000' }, // Red particles
+                shape: {
+                    type: 'circle',
+                    stroke: { width: 0, color: '#000000' },
+                    polygon: { nb_sides: 5 },
+                },
+                opacity: { value: 0.9, random: true, anim: { enable: false, speed: 1, opacity_min: 0.6, sync: false } },
+                size: { value: 7, random: true, anim: { enable: false, speed: 40, size_min: 0.1, sync: false } },
+                line_linked: { enable: false, distance: 500, color: '#ff0000', opacity: 0.9, width: 2 }, // Red lines
+                move: {
+                    enable: true,
+                    speed: 6,
+                    direction: 'none',
+                    random: true,
+                    straight: false,
+                    out_mode: 'out',
+                    bounce: false,
+                    attract: { enable: false, rotateX: 600, rotateY: 1200 },
+                },
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' }, resize: true },
+                modes: { grab: { distance: 400, line_linked: { opacity: 1 } }, bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 }, repulse: { distance: 200, duration: 0.4 }, push: { particles_nb: 4 }, remove: { particles_nb: 2 } },
+            },
+            retina_detect: true,
+        });
     </script>
 </body>
 </html>
