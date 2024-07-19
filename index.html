@@ -122,6 +122,26 @@
             transform: scale(1.05);
         }
 
+        .about-button {
+            background: linear-gradient(45deg, #ff0000, #d00000); /* Gradient background */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px; /* Adjusted font size for mobile */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out, transform 0.2s;
+            text-decoration: none; /* Remove default underline for links */
+            margin-top: 20px; /* Adjust margin as needed */
+        }
+
+        .about-button:hover {
+            background: linear-gradient(45deg, #d00000, #ff0000); /* Darker gradient on hover */
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+            transform: scale(1.05);
+        }
+
         @media (min-width: 768px) {
             /* Adjust styles for screens with a minimum width of 768px (PC screens) */
             .logo {
@@ -154,7 +174,8 @@
                 font-size: 18px;
             }
 
-            input[type="submit"] {
+            input[type="submit"],
+            .about-button {
                 font-size: 18px;
             }
         }
@@ -169,11 +190,30 @@
         <!-- Logo in the middle -->
         <img src="logo1.PNG" alt="Your Logo" class="logo">
         
-        <h1>Coming soon...</h1>
-        <p></p>
+        <h1>Welcome to UFA</h1>
+
+        <!-- About Us Button -->
+        <a href="#about" class="about-button">About Us</a>
+
+        <!-- About Us Section -->
+        <section id="about">
+            <div>
+                <h2>About Us</h2>
+                <p>
+                    Our company is revolutionizing the fitness shopping experience in the UAE by aggregating all supplement and activewear stores into a single, user-friendly mobile platform. No more hopping between websites—we bring quality, variety, and authenticity right to your fingertips.
+                </p>
+                <p>
+                    Our app isn't just about transactions; it's your personalized fitness shopping companion. Powered by AI, it recommends products tailored to your goals and preferences. Enjoy exclusive discounts and a loyalty program that rewards your healthy choices.
+                </p>
+                <p>
+                    But we're more than a marketplace. We're building a community of fitness enthusiasts. User reviews offer trusted advice, while fitness challenges and localized content educate and inspire. Our mission is clear: to simplify and enhance the fitness shopping experience in the UAE.
+                </p>
+            </div>
+        </section>
 
         <h2>Contact Us</h2>
-        <form action="https://formspree.io/f/xpzgrrno" method="POST">
+        <!-- Contact form -->
+        <form action="send_email.php" method="POST">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required><br>
 
@@ -192,37 +232,3 @@
 
     <!-- Particles.js Configuration -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script>
-        particlesJS('particles-js', {
-            particles: {
-                number: { value: 50, density: { enable: true, value_area: 800 } },
-                color: { value: '#ff0000' }, // Red particles
-                shape: {
-                    type: 'circle',
-                    stroke: { width: 0, color: '#000000' },
-                    polygon: { nb_sides: 5 },
-                },
-                opacity: { value: 0.9, random: true, anim: { enable: false, speed: 1, opacity_min: 0.6, sync: false } },
-                size: { value: 7, random: true, anim: { enable: false, speed: 40, size_min: 0.1, sync: false } },
-                line_linked: { enable: false, distance: 500, color: '#ff0000', opacity: 0.9, width: 2 }, // Red lines
-                move: {
-                    enable: true,
-                    speed: 6,
-                    direction: 'none',
-                    random: true,
-                    straight: false,
-                    out_mode: 'out',
-                    bounce: false,
-                    attract: { enable: false, rotateX: 600, rotateY: 1200 },
-                },
-            },
-            interactivity: {
-                detect_on: 'canvas',
-                events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' }, resize: true },
-                modes: { grab: { distance: 400, line_linked: { opacity: 1 } }, bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 }, repulse: { distance: 200, duration: 0.4 }, push: { particles_nb: 4 }, remove: { particles_nb: 2 } },
-            },
-            retina_detect: true,
-        });
-    </script>
-</body>
-</html>
