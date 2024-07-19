@@ -244,4 +244,47 @@
                     Our company is revolutionizing the fitness shopping experience in the UAE by aggregating all supplement and activewear stores into a single, user-friendly mobile platform. No more hopping between websites—we bring quality, variety, and authenticity right to your fingertips.
                 </p>
                 <p>
-                    Our app isn't just about transactions;
+                    Our app isn't just about transactions; it's your personalized fitness shopping companion. Powered by AI, it recommends products tailored to your goals and preferences. Enjoy exclusive discounts and a loyalty program that rewards your healthy choices.
+                </p>
+                <p>
+                    But we're more than a marketplace. We're building a community of fitness enthusiasts. User reviews offer trusted advice, while fitness challenges and localized content educate and inspire. Our mission is clear: to simplify and enhance the fitness shopping experience in the UAE.
+                </p>
+            </div>
+        </div>
+
+        <h2>Contact Us</h2>
+        <!-- Contact form -->
+        <form action="send_email.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required><br>
+
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" required></textarea><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <!-- Particles.js Configuration -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <!-- JavaScript for Modal -->
+    <script>
+        // Function to open the About Us modal
+        function openAboutModal() {
+            document.getElementById('aboutModal').style.display = 'block';
+        }
+
+        // Function to close the About Us modal
+        function closeAboutModal() {
+            document.getElementById('aboutModal').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
