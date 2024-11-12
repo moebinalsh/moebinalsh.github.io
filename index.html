@@ -3,86 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UFA</title>
+    <title>UFA Contact Form</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
             padding: 0;
-            overflow-x: hidden; /* Prevent horizontal overflow */
-            background-color: #fff; /* Set background color to white */
-            color: #000; /* Set text color to black for contrast */
+            overflow-x: hidden;
+            background-color: #fff;
+            color: #000;
             font-family: 'Roboto', sans-serif;
-            position: relative; /* Ensure relative positioning */
-        }
-
-        #particles-js {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
         }
 
         .content {
-            position: relative;
             width: 100%;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
-            padding: 50px 20px; /* Adjusted padding to prevent logo from being cut off */
-            box-sizing: border-box; /* Include padding in width and height calculations */
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 50px 20px;
+            box-sizing: border-box;
         }
 
         .logo {
-            max-width: 80%; /* Adjusted logo size for mobile */
+            max-width: 80%;
             margin-bottom: 20px;
         }
 
         h1 {
-            font-size: 24px; /* Adjusted font size for mobile */
+            font-size: 24px;
             text-align: center;
-            margin-bottom: 10px; /* Adjusted margin for mobile */
+            margin-bottom: 10px;
             font-weight: 700;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-            transition: color 0.3s ease-in-out;
-        }
-
-        h1:hover {
-            color: #d00000;
-        }
-
-        p {
-            font-size: 18px; /* Adjusted font size for mobile */
-            text-align: center;
-            margin-bottom: 10px; /* Adjusted margin for mobile */
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
         }
 
         h2 {
-            font-size: 20px; /* Adjusted font size for mobile */
+            font-size: 20px;
             text-align: center;
-            margin-top: 10px; /* Adjusted margin for mobile */
+            margin-top: 10px;
             font-weight: 700;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
         }
 
         label {
-            font-size: 16px; /* Adjusted font size for mobile */
+            font-size: 16px;
             display: block;
             margin-bottom: 5px;
             font-weight: 700;
         }
 
-        input[type="text"],
-        input[type="email"],
-        input[type="tel"],
-        textarea {
+        input[type="text"], input[type="email"], input[type="tel"], textarea {
             width: 100%;
             padding: 10px;
             margin-bottom: 10px;
@@ -90,174 +62,31 @@
             border-radius: 5px;
             background-color: #f9f9f9;
             color: #333;
-            font-size: 16px; /* Adjusted font size for mobile */
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-        }
-
-        input[type="text"]:focus,
-        input[type="email"]:focus,
-        input[type="tel"]:focus,
-        textarea:focus {
-            border-color: #ff0000; /* Red border on focus */
-            box-shadow: 0 2px 8px rgba(255, 0, 0, 0.2);
-            outline: none;
+            font-size: 16px;
         }
 
         input[type="submit"] {
-            background: linear-gradient(45deg, #ff0000, #d00000); /* Gradient background */
+            background: linear-gradient(45deg, #ff0000, #d00000);
             color: #fff;
             padding: 10px 20px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 16px; /* Adjusted font size for mobile */
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-            transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out, transform 0.2s;
+            font-size: 16px;
         }
 
         input[type="submit"]:hover {
-            background: linear-gradient(45deg, #d00000, #ff0000); /* Darker gradient on hover */
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(45deg, #d00000, #ff0000);
             transform: scale(1.05);
-        }
-
-        .about-button {
-            background: linear-gradient(45deg, #ff0000, #d00000); /* Gradient background */
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px; /* Adjusted font size for mobile */
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-            transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out, transform 0.2s;
-            text-decoration: none; /* Remove default underline for links */
-            margin-top: 20px; /* Adjust margin as needed */
-        }
-
-        .about-button:hover {
-            background: linear-gradient(45deg, #d00000, #ff0000); /* Darker gradient on hover */
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-            transform: scale(1.05);
-        }
-
-        /* About Us Modal Styles */
-        .modal {
-            display: none; /* Hidden by default */
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.8); /* Black background with transparency */
-        }
-
-        .modal-content {
-            background-color: #fefefe;
-            margin: 10% auto;
-            padding: 30px;
-            border-radius: 10px;
-            width: 80%;
-            max-width: 600px; /* Maximum width of the modal */
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-            position: relative;
-            color: #333;
-        }
-
-        .close {
-            color: #aaa;
-            font-size: 30px;
-            position: absolute;
-            top: 10px;
-            right: 15px;
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
-
-        .close:hover,
-        .close:focus {
-            color: #000;
-        }
-
-        @media (min-width: 768px) {
-            /* Adjust styles for screens with a minimum width of 768px (PC screens) */
-            .logo {
-                max-width: 300px; /* Adjusted logo size for PC */
-            }
-
-            h1 {
-                font-size: 36px;
-                margin-bottom: 20px;
-            }
-
-            p {
-                font-size: 24px;
-                margin-bottom: 20px;
-            }
-
-            h2 {
-                font-size: 28px;
-                margin-top: 20px;
-            }
-
-            label {
-                font-size: 18px;
-            }
-
-            input[type="text"],
-            input[type="email"],
-            input[type="tel"],
-            textarea {
-                font-size: 18px;
-            }
-
-            input[type="submit"],
-            .about-button {
-                font-size: 18px;
-            }
         }
     </style>
 </head>
 <body>
-    <!-- Particles.js Background -->
-    <div id="particles-js"></div>
-    
-    <!-- Content -->
     <div class="content">
-        <!-- Logo in the middle -->
         <img src="logo1.PNG" alt="Your Logo" class="logo">
         
-        <h1>Welcome to UFA</h1>
+        <h1>Contact Us</h1>
 
-        <!-- About Us Button -->
-        <a href="#" class="about-button" onclick="openAboutModal()">About Us</a>
-
-        <!-- About Us Modal -->
-        <div id="aboutModal" class="modal">
-            <!-- Modal content -->
-            <div class="modal-content">
-                <span class="close" onclick="closeAboutModal()">&times;</span>
-                <h2>About Us</h2>
-                <p>
-                    UFA is your ultimate fitness companion in the UAE. We provide a curated selection of top-notch fitness products, tailored recommendations, and a community-driven platform for enthusiasts like you.
-                </p>
-                <p>
-                    With UFA, discovering the right gear for your fitness journey is at your fingertips.
-                </p>
-                <p>
-                    UFA is more than a marketplace; it's your personalized fitness shopping companion. Powered by AI, it recommends products tailored to your goals and preferences. Enjoy exclusive discounts and a loyalty program that rewards your healthy choices.
-                </p>
-                <p>
-                    But we're more than a marketplace. We're building a community of fitness enthusiasts. User reviews offer trusted advice, while fitness challenges and localized content educate and inspire. Our mission is clear: to simplify and enhance the fitness shopping experience in the UAE.
-                </p>
-            </div>
-        </div>
-
-        <h2>Contact Us</h2>
-        <!-- Contact form -->
         <form action="send_email.php" method="POST">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required><br>
@@ -274,53 +103,5 @@
             <input type="submit" value="Submit">
         </form>
     </div>
-
-    <!-- Particles.js Configuration -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
-    <!-- JavaScript for Modal -->
-    <script>
-        // Function to open the About Us modal
-        function openAboutModal() {
-            document.getElementById('aboutModal').style.display = 'block';
-        }
-
-        // Function to close the About Us modal
-        function closeAboutModal() {
-            document.getElementById('aboutModal').style.display = 'none';
-        }
-
-        // Particles.js configuration
-        particlesJS('particles-js', {
-            particles: {
-                number: { value: 50, density: { enable: true, value_area: 800 } },
-                color: { value: '#ff0000' }, // Red particles
-                shape: {
-                    type: 'circle',
-                    stroke: { width: 0, color: '#000000' },
-                    polygon: { nb_sides: 5 },
-                },
-                opacity: { value: 0.9, random: true, anim: { enable: false, speed: 1, opacity_min: 0.6, sync: false } },
-                size: { value: 7, random: true, anim: { enable: false, speed: 40, size_min: 0.1, sync: false } },
-                line_linked: { enable: false, distance: 500, color: '#ff0000', opacity: 0.9, width: 2 }, // Red lines
-                move: {
-                    enable: true,
-                    speed: 6,
-                    direction: 'none',
-                    random: true,
-                    straight: false,
-                    out_mode: 'out',
-                    bounce: false,
-                    attract: { enable: false, rotateX: 600, rotateY: 1200 },
-                },
-            },
-            interactivity: {
-                detect_on: 'canvas',
-                events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' }, resize: true },
-                modes: { grab: { distance: 400, line_linked: { opacity: 1 } }, bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 }, repulse: { distance: 200, duration: 0.4 }, push: { particles_nb: 4 }, remove: { particles_nb: 2 } },
-            },
-            retina_detect: true,
-        });
-    </script>
 </body>
 </html>
