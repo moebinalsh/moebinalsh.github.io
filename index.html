@@ -104,24 +104,7 @@
             outline: none;
         }
 
-        input[type="submit"] {
-            background: linear-gradient(45deg, #ff0000, #d00000); /* Gradient background */
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px; /* Adjusted font size for mobile */
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-            transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out, transform 0.2s;
-        }
-
-        input[type="submit"]:hover {
-            background: linear-gradient(45deg, #d00000, #ff0000); /* Darker gradient on hover */
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-            transform: scale(1.05);
-        }
-
+        input[type="submit"],
         .about-button {
             background: linear-gradient(45deg, #ff0000, #d00000); /* Gradient background */
             color: #fff;
@@ -132,10 +115,9 @@
             font-size: 16px; /* Adjusted font size for mobile */
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
             transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out, transform 0.2s;
-            text-decoration: none; /* Remove default underline for links */
-            margin-top: 20px; /* Adjust margin as needed */
         }
 
+        input[type="submit"]:hover,
         .about-button:hover {
             background: linear-gradient(45deg, #d00000, #ff0000); /* Darker gradient on hover */
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
@@ -256,23 +238,23 @@
             </div>
         </div>
 
-<h2>Contact Us</h2>
-<!-- Contact form updated with Formspree -->
-<form action="https://formspree.io/f/xpzgrrno" method="POST">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required><br>
+        <h2>Contact Us</h2>
+        <!-- Contact form updated with Formspree -->
+        <form action="https://formspree.io/f/xpzgrrno" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
 
-    <label for="phone">Phone:</label>
-    <input type="tel" id="phone" name="phone" required><br>
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required><br>
 
-    <label for="message">Message:</label><br>
-    <textarea id="message" name="message" rows="4" required></textarea><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" required></textarea><br>
 
-    <button type="submit">Send</button>
-</form>
+            <input type="submit" value="Send">
+        </form>
 
     </div>
 
